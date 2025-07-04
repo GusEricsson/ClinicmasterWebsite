@@ -1259,6 +1259,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgb(6 44 66 / var(--tw-bg-opacity, 1));
 }
 
+
 .bg-success{
   --tw-bg-opacity: 1;
   background-color: rgb(35 195 153 / var(--tw-bg-opacity, 1));
@@ -1808,6 +1809,11 @@ h1, h2, h3, h4, h5, h6 {
 .hover\:bg-primary-600:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(75 45 84 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-secondary:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(15, 110, 168 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-surface-50:hover{
