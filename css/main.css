@@ -1826,6 +1826,11 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-secondary:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 110 168 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:text-primary:hover{
   --tw-text-opacity: 1;
   color: rgb(94 56 105 / var(--tw-text-opacity, 1));
