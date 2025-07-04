@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Features - Clinicmaster Interactive Tour</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Experience Clinicmaster through our interactive demo. Explore real healthcare workflows, EMR features, and practice management tools tailored to your specialty." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fclinicmast7424back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-soft sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 4c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2zm-6 8c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2zm12 0c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2zm-6 8c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2z"/>
+                    </svg>
+                    <span class="text-xl font-bold text-secondary">Clinicmaster</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="homepage.html" class="text-text-secondary hover:text-primary transition-smooth px-3 py-2 rounded-md text-sm">Home</a>
+                        <a href="platform_demo.html" class="text-primary font-medium px-3 py-2 rounded-md text-sm">Features</a>
+                        <a href="pricing_roi_calculator.html" class="text-text-secondary hover:text-primary transition-smooth px-3 py-2 rounded-md text-sm">Pricing & ROI</a>
+                        <a href="customer_stories.html" class="text-text-secondary hover:text-primary transition-smooth px-3 py-2 rounded-md text-sm">Customer Stories</a>
+                        <a href="security_compliance.html" class="text-text-secondary hover:text-primary transition-smooth px-3 py-2 rounded-md text-sm">Security</a>
+                        <a href="implementation_support.html" class="text-text-secondary hover:text-primary transition-smooth px-3 py-2 rounded-md text-sm">How We Care</a>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#consultation-form" class="btn-primary">Request Demo</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary focus:outline-none focus:text-primary" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-border">
+                <a href="homepage.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="platform_demo.html" class="text-primary block px-3 py-2 rounded-md text-base font-medium">Features</a>
+                <a href="pricing_roi_calculator.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Pricing & ROI</a>
+                <a href="customer_stories.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Customer Stories</a>
+                <a href="security_compliance.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Security</a>
+                <a href="implementation_support.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Support</a>
+                <a href="#consultation-form" class="btn-primary block text-center mt-4">Book Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Demo Introduction Section -->
+    <section class="bg-gradient-to-br from-primary-50 to-accent-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl lg:text-5xl font-bold text-secondary mb-6">Experience Clinicmaster</h1>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto mb-8">Take an interactive tour of our platform tailored to your practice type and role. See how we transform complex healthcare workflows into seamless experiences.</p>
+            </div>
+
+            <!-- Practice Type & Role Selector -->
+            <div class="bg-white rounded-lg shadow-modal p-8 max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Practice Type Selector -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-secondary mb-4">Select Your Practice Type</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center p-4 border border-border rounded-lg cursor-pointer hover:bg-surface-50 transition-smooth">
+                                <input type="radio" name="practice-type" value="solo" class="text-primary focus:ring-primary mr-3" checked />
+                                <div>
+                                    <div class="font-medium text-secondary">Solo Practice</div>
+                                    <div class="text-sm text-text-muted">1-2 providers, streamlined workflows</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border border-border rounded-lg cursor-pointer hover:bg-surface-50 transition-smooth">
+                                <input type="radio" name="practice-type" value="group" class="text-primary focus:ring-primary mr-3" />
+                                <div>
+                                    <div class="font-medium text-secondary">Group Practice</div>
+                                    <div class="text-sm text-text-muted">3-15 providers, collaborative care</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border border-border rounded-lg cursor-pointer hover:bg-surface-50 transition-smooth">
+                                <input type="radio" name="practice-type" value="network" class="text-primary focus:ring-primary mr-3" />
+                                <div>
+                                    <div class="font-medium text-secondary">Multi-Location Network</div>
+                                    <div class="text-sm text-text-muted">15+ providers, multiple locations</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Role Selector -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-secondary mb-4">Select Your Role</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center p-4 border border-border rounded-lg cursor-pointer hover:bg-surface-50 transition-smooth">
+                                <input type="radio" name="user-role" value="provider" class="text-primary focus:ring-primary mr-3" checked />
+                                <div>
+                                    <div class="font-medium text-secondary">Healthcare Provider</div>
+                                    <div class="text-sm text-text-muted">Focus on clinical workflows</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border border-border rounded-lg cursor-pointer hover:bg-surface-50 transition-smooth">
+                                <input type="radio" name="user-role" value="administrator" class="text-primary focus:ring-primary mr-3" />
+                                <div>
+                                    <div class="font-medium text-secondary">Practice Administrator</div>
+                                    <div class="text-sm text-text-muted">Operations and management focus</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border border-border rounded-lg cursor-pointer hover:bg-surface-50 transition-smooth">
+                                <input type="radio" name="user-role" value="it-manager" class="text-primary focus:ring-primary mr-3" />
+                                <div>
+                                    <div class="font-medium text-secondary">IT Manager</div>
+                                    <div class="text-sm text-text-muted">Technical integration and security</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-8">
+                    <button onclick="startDemo()" class="btn-primary text-lg px-8 py-4">Start Interactive Demo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Interface -->
+    <section id="demo-interface" class="py-20 bg-white hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Progress Indicator -->
+            <div class="mb-8">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-2xl font-bold text-secondary">Interactive Demo</h2>
+                    <div class="text-sm text-text-muted">
+                        <span id="current-step">1</span> of <span id="total-steps">5</span> modules
+                    </div>
+                </div>
+                <div class="w-full bg-surface-200 rounded-full h-2">
+                    <div id="progress-bar" class="bg-primary h-2 rounded-full transition-smooth" style="width: 20%"></div>
+                </div>
+            </div>
+
+            <!-- Module Navigation -->
+            <div class="flex flex-wrap gap-2 mb-8">
+                <button onclick="showModule('scheduling')" class="module-nav-btn active px-4 py-2 rounded-lg text-sm font-medium transition-smooth" data-module="scheduling">
+                    <svg class="w-4 h-4 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                    </svg>
+                    Smart Scheduling
+                </button>
+                <button onclick="showModule('emr')" class="module-nav-btn px-4 py-2 rounded-lg text-sm font-medium transition-smooth" data-module="emr">
+                    <svg class="w-4 h-4 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                        <path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a1 1 0 102 0V3h2v1a1 1 0 102 0V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                    </svg>
+                    EMR System
+                </button>
+                <button onclick="showModule('billing')" class="module-nav-btn px-4 py-2 rounded-lg text-sm font-medium transition-smooth" data-module="billing">
+                    <svg class="w-4 h-4 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"/>
+                    </svg>
+                    Billing & RCM
+                </button>
+                <button onclick="showModule('portal')" class="module-nav-btn px-4 py-2 rounded-lg text-sm font-medium transition-smooth" data-module="portal">
+                    <svg class="w-4 h-4 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"/>
+                    </svg>
+                    Patient Portal
+                </button>
+                <button onclick="showModule('analytics')" class="module-nav-btn px-4 py-2 rounded-lg text-sm font-medium transition-smooth" data-module="analytics">
+                    <svg class="w-4 h-4 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
+                    </svg>
+                    Analytics
+                </button>
+            </div>
+
+            <!-- Demo Content Area -->
+            <div class="bg-surface-50 rounded-lg p-8 min-h-96">
+                <!-- Scheduling Module -->
+                <div id="scheduling-module" class="demo-module">
+                    <div class="grid lg:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-4">Smart Scheduling System</h3>
+                            <p class="text-text-secondary mb-6">Experience our AI-powered appointment management with drag-and-drop scheduling, automated reminders, and patient self-booking.</p>
+                            
+                            <!-- Before/After Comparison -->
+                            <div class="bg-white rounded-lg p-6 mb-6">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h4 class="font-semibold text-secondary">Before vs After</h4>
+                                    <div class="flex bg-surface-100 rounded-lg p-1">
+                                        <button onclick="showComparison('before')" class="comparison-btn active px-3 py-1 rounded text-sm font-medium transition-smooth">Before</button>
+                                        <button onclick="showComparison('after')" class="comparison-btn px-3 py-1 rounded text-sm font-medium transition-smooth">After</button>
+                                    </div>
+                                </div>
+                                
+                                <div id="before-scheduling" class="comparison-content">
+                                    <div class="text-error-600 mb-2">❌ Manual phone scheduling</div>
+                                    <div class="text-error-600 mb-2">❌ Double bookings and conflicts</div>
+                                    <div class="text-error-600 mb-2">❌ 25% no-show rate</div>
+                                    <div class="text-error-600">❌ 15 minutes per appointment booking</div>
+                                </div>
+                                
+                                <div id="after-scheduling" class="comparison-content hidden">
+                                    <div class="text-success-600 mb-2">✅ Online self-scheduling 24/7</div>
+                                    <div class="text-success-600 mb-2">✅ Automatic conflict prevention</div>
+                                    <div class="text-success-600 mb-2">✅ 8% no-show rate with smart reminders</div>
+                                    <div class="text-success-600">✅ 3 minutes per appointment booking</div>
+                                </div>
+                            </div>
+
+                            <!-- Interactive Features -->
+                            <div class="space-y-4">
+                                <div class="flex items-center p-3 bg-white rounded-lg border border-border hover:shadow-soft transition-smooth cursor-pointer" onclick="highlightFeature('drag-drop')">
+                                    <div class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center mr-3">
+                                        <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-secondary">Drag & Drop Scheduling</div>
+                                        <div class="text-sm text-text-muted">Intuitive appointment management</div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center p-3 bg-white rounded-lg border border-border hover:shadow-soft transition-smooth cursor-pointer" onclick="highlightFeature('reminders')">
+                                    <div class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center mr-3">
+                                        <svg class="w-4 h-4 text-accent-800" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium text-secondary">Automated Reminders</div>
+                                        <div class="text-sm text-text-muted">SMS, email, and app notifications</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Demo Screen -->
+                        <div class="bg-white rounded-lg shadow-modal p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="font-semibold text-secondary">Weekly Schedule View</h4>
+                                <div class="flex space-x-2">
+                                    <button class="p-2 text-text-muted hover:text-primary transition-smooth">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                    <span class="text-sm text-text-secondary">Dec 16-22, 2024</span>
+                                    <button class="p-2 text-text-muted hover:text-primary transition-smooth">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Calendar Grid -->
+                            <div class="grid grid-cols-7 gap-1 text-xs">
+                                <div class="p-2 text-center font-medium text-text-muted">Mon</div>
+                                <div class="p-2 text-center font-medium text-text-muted">Tue</div>
+                                <div class="p-2 text-center font-medium text-text-muted">Wed</div>
+                                <div class="p-2 text-center font-medium text-text-muted">Thu</div>
+                                <div class="p-2 text-center font-medium text-text-muted">Fri</div>
+                                <div class="p-2 text-center font-medium text-text-muted">Sat</div>
+                                <div class="p-2 text-center font-medium text-text-muted">Sun</div>
+                            </div>
+
+                            <!-- Sample Appointments -->
+                            <div class="space-y-2 mt-4">
+                                <div class="bg-primary-100 border-l-4 border-primary p-3 rounded cursor-pointer hover:shadow-soft transition-smooth">
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <div class="font-medium text-secondary text-sm">Sarah Johnson</div>
+                                            <div class="text-xs text-text-muted">Annual Checkup</div>
+                                        </div>
+                                        <div class="text-xs text-text-muted">9:00 AM</div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-accent-100 border-l-4 border-accent-600 p-3 rounded cursor-pointer hover:shadow-soft transition-smooth">
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <div class="font-medium text-secondary text-sm">Michael Chen</div>
+                                            <div class="text-xs text-text-muted">Follow-up Visit</div>
+                                        </div>
+                                        <div class="text-xs text-text-muted">10:30 AM</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- HIPAA Compliance Tooltip -->
+                            <div class="mt-4 p-3 bg-success-50 border border-success-200 rounded-lg">
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-success-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-xs text-success-800 font-medium">HIPAA Compliant - All data encrypted</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EMR Module -->
+                <div id="emr-module" class="demo-module hidden">
+                    <div class="grid lg:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-4">Electronic Medical Records</h3>
+                            <p class="text-text-secondary mb-6">Streamlined clinical documentation with intelligent templates, prescription management, and seamless lab integration.</p>
+                            
+                            <!-- Patient Chart Navigation -->
+                            <div class="bg-white rounded-lg p-6 mb-6">
+                                <h4 class="font-semibold text-secondary mb-4">Patient: Maria Rodriguez</h4>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <button onclick="showChartSection('overview')" class="chart-nav-btn active px-3 py-2 rounded text-sm font-medium transition-smooth">Overview</button>
+                                    <button onclick="showChartSection('vitals')" class="chart-nav-btn px-3 py-2 rounded text-sm font-medium transition-smooth">Vitals</button>
+                                    <button onclick="showChartSection('medications')" class="chart-nav-btn px-3 py-2 rounded text-sm font-medium transition-smooth">Medications</button>
+                                    <button onclick="showChartSection('labs')" class="chart-nav-btn px-3 py-2 rounded text-sm font-medium transition-smooth">Lab Results</button>
+                                </div>
+
+                                <div id="chart-overview" class="chart-section">
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div class="p-3 bg-surface-50 rounded">
+                                            <div class="text-sm text-text-muted">Age</div>
+                                            <div class="font-semibold text-secondary">42 years</div>
+                                        </div>
+                                        <div class="p-3 bg-surface-50 rounded">
+                                            <div class="text-sm text-text-muted">Last Visit</div>
+                                            <div class="font-semibold text-secondary">Dec 10, 2024</div>
+                                        </div>
+                                        <div class="p-3 bg-surface-50 rounded">
+                                            <div class="text-sm text-text-muted">Allergies</div>
+                                            <div class="font-semibold text-error-600">Penicillin</div>
+                                        </div>
+                                        <div class="p-3 bg-surface-50 rounded">
+                                            <div class="text-sm text-text-muted">Insurance</div>
+                                            <div class="font-semibold text-secondary">Blue Cross</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="chart-vitals" class="chart-section hidden">
+                                    <div class="space-y-3">
+                                        <div class="flex justify-between items-center p-3 bg-surface-50 rounded">
+                                            <span class="text-text-secondary">Blood Pressure</span>
+                                            <span class="font-semibold text-secondary">120/80 mmHg</span>
+                                        </div>
+                                        <div class="flex justify-between items-center p-3 bg-surface-50 rounded">
+                                            <span class="text-text-secondary">Heart Rate</span>
+                                            <span class="font-semibold text-secondary">72 bpm</span>
+                                        </div>
+                                        <div class="flex justify-between items-center p-3 bg-surface-50 rounded">
+                                            <span class="text-text-secondary">Temperature</span>
+                                            <span class="font-semibold text-secondary">98.6°F</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Clinical Note Template -->
+                            <div class="bg-white rounded-lg p-6">
+                                <h4 class="font-semibold text-secondary mb-4">Smart Clinical Notes</h4>
+                                <div class="space-y-3">
+                                    <div class="p-3 border border-border rounded hover:bg-surface-50 transition-smooth cursor-pointer">
+                                        <div class="font-medium text-secondary text-sm">Chief Complaint Template</div>
+                                        <div class="text-xs text-text-muted">Auto-populated based on appointment type</div>
+                                    </div>
+                                    <div class="p-3 border border-border rounded hover:bg-surface-50 transition-smooth cursor-pointer">
+                                        <div class="font-medium text-secondary text-sm">Assessment & Plan</div>
+                                        <div class="text-xs text-text-muted">ICD-10 code suggestions included</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- EMR Interface -->
+                        <div class="bg-white rounded-lg shadow-modal p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="font-semibold text-secondary">Clinical Documentation</h4>
+                                <div class="flex space-x-2">
+                                    <button class="px-3 py-1 bg-primary text-white rounded text-sm">Save</button>
+                                    <button class="px-3 py-1 bg-surface-200 text-text-secondary rounded text-sm">Template</button>
+                                </div>
+                            </div>
+
+                            <!-- Note Editor -->
+                            <div class="border border-border rounded-lg p-4 mb-4 min-h-32 bg-surface-50">
+                                <div class="text-sm text-text-secondary">
+                                    <strong>Chief Complaint:</strong> Patient presents with persistent cough and fatigue lasting 2 weeks.<br /><br />
+                                    <strong>History of Present Illness:</strong> 42-year-old female reports dry cough, especially at night, accompanied by general fatigue. No fever or shortness of breath.<br /><br />
+                                    <strong>Assessment:</strong> Likely viral upper respiratory infection<br />
+                                    <strong>Plan:</strong> Supportive care, follow-up in 1 week if symptoms persist
+                                </div>
+                            </div>
+
+                            <!-- Prescription Management -->
+                            <div class="border-t border-border pt-4">
+                                <h5 class="font-medium text-secondary mb-3">Prescriptions</h5>
+                                <div class="space-y-2">
+                                    <div class="flex items-center justify-between p-3 bg-surface-50 rounded">
+                                        <div>
+                                            <div class="font-medium text-secondary text-sm">Dextromethorphan</div>
+                                            <div class="text-xs text-text-muted">15mg, twice daily for 7 days</div>
+                                        </div>
+                                        <button class="text-primary text-sm hover:text-primary-600 transition-smooth">Send to Pharmacy</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Security Notice -->
+                            <div class="mt-4 p-3 bg-primary-50 border border-primary-200 rounded-lg">
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-xs text-primary font-medium">End-to-end encrypted patient data</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other modules would be implemented similarly -->
+                <div id="billing-module" class="demo-module hidden">
+                    <div class="text-center py-12">
+                        <h3 class="text-xl font-semibold text-secondary mb-4">Revenue Cycle Management</h3>
+                        <p class="text-text-secondary mb-6">Automated billing, claims processing, and payment tracking with real-time analytics.</p>
+                        <div class="bg-white rounded-lg p-8 max-w-md mx-auto">
+                            <div class="text-3xl font-bold text-success-600 mb-2">$127,450</div>
+                            <div class="text-text-muted mb-4">Monthly Revenue</div>
+                            <div class="text-sm text-success-600">↗ 18% increase from last month</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="portal-module" class="demo-module hidden">
+                    <div class="text-center py-12">
+                        <h3 class="text-xl font-semibold text-secondary mb-4">Patient Portal</h3>
+                        <p class="text-text-secondary mb-6">Secure patient communication, appointment booking, and health record access.</p>
+                        <div class="bg-white rounded-lg p-8 max-w-md mx-auto">
+                            <div class="text-3xl font-bold text-primary mb-2">95%</div>
+                            <div class="text-text-muted mb-4">Patient Satisfaction</div>
+                            <div class="text-sm text-primary">Based on 2,847 patient surveys</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="analytics-module" class="demo-module hidden">
+                    <div class="text-center py-12">
+                        <h3 class="text-xl font-semibold text-secondary mb-4">Practice Analytics</h3>
+                        <p class="text-text-secondary mb-6">Comprehensive insights into practice performance and patient outcomes.</p>
+                        <div class="grid md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+                            <div class="bg-white rounded-lg p-6">
+                                <div class="text-2xl font-bold text-primary mb-2">40%</div>
+                                <div class="text-text-muted text-sm">Time Savings</div>
+                            </div>
+                            <div class="bg-white rounded-lg p-6">
+                                <div class="text-2xl font-bold text-success-600 mb-2">25%</div>
+                                <div class="text-text-muted text-sm">Revenue Increase</div>
+                            </div>
+                            <div class="bg-white rounded-lg p-6">
+                                <div class="text-2xl font-bold text-accent-800 mb-2">8%</div>
+                                <div class="text-text-muted text-sm">No-show Rate</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Demo Navigation -->
+            <div class="flex justify-between items-center mt-8">
+                <button onclick="previousModule()" class="flex items-center px-4 py-2 text-text-secondary hover:text-primary transition-smooth">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    Previous
+                </button>
+                <button onclick="nextModule()" class="flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-600 transition-smooth">
+                    Next
+                    <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personalized Summary Section -->
+    <section id="demo-summary" class="py-20 bg-gradient-to-br from-secondary to-secondary-700 text-white hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-6">Your Personalized Practice Transformation</h2>
+            <p class="text-xl text-secondary-100 mb-12">Based on your selections, here's how Clinicmaster can transform your practice:</p>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white/10 backdrop-blur rounded-lg p-6">
+                    <div class="text-3xl font-bold text-accent mb-2" id="time-savings">40%</div>
+                    <div class="text-secondary-100">Time Savings</div>
+                    <div class="text-sm text-secondary-200 mt-2">Reduce administrative tasks</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur rounded-lg p-6">
+                    <div class="text-3xl font-bold text-accent mb-2" id="revenue-increase">25%</div>
+                    <div class="text-secondary-100">Revenue Increase</div>
+                    <div class="text-sm text-secondary-200 mt-2">Optimize billing processes</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur rounded-lg p-6">
+                    <div class="text-3xl font-bold text-accent mb-2" id="patient-satisfaction">95%</div>
+                    <div class="text-secondary-100">Patient Satisfaction</div>
+                    <div class="text-sm text-secondary-200 mt-2">Enhanced care experience</div>
+                </div>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur rounded-lg p-8 mb-8">
+                <h3 class="text-xl font-semibold mb-4">Recommended Implementation Plan</h3>
+                <div class="grid md:grid-cols-3 gap-6 text-left">
+                    <div>
+                        <div class="font-semibold text-accent mb-2">Week 1-2</div>
+                        <div class="text-sm text-secondary-100">System setup and data migration</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-accent mb-2">Week 3-4</div>
+                        <div class="text-sm text-secondary-100">Staff training and workflow optimization</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-accent mb-2">Week 5-6</div>
+                        <div class="text-sm text-secondary-100">Go-live support and fine-tuning</div>
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="showConsultationForm()" class="bg-accent text-secondary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent-300 transition-smooth">
+                Schedule Your Consultation
+            </button>
+        </div>
+    </section>
+
+    <!-- Consultation Booking Form -->
+    <section id="consultation-form" class="py-20 bg-white hidden">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-secondary mb-4">Schedule Your Personalized Consultation</h2>
+                <p class="text-xl text-text-secondary">Let's discuss how Clinicmaster can transform your specific practice needs.</p>
+            </div>
+
+            <form class="bg-surface-50 rounded-lg p-8">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium text-text-secondary mb-2">First Name *</label>
+                        <input type="text" class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-smooth" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-text-secondary mb-2">Last Name *</label>
+                        <input type="text" class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-smooth" required />
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium text-text-secondary mb-2">Email *</label>
+                        <input type="email" class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-smooth" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-text-secondary mb-2">Phone Number *</label>
+                        <input type="tel" class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-smooth" required />
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-text-secondary mb-2">Practice Name *</label>
+                    <input type="text" class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-smooth" required />
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium text-text-secondary mb-2">Practice Type *</label>
+                        <select class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-smooth" required>
+                            <option value>Select practice type</option>
+                            <option value="solo">Solo Practice</option>
+                            <option value="group">Group Practice</option>
+                            <option value="network">Multi-Location Network</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-text-secondary mb-2">Number of Providers</label>
+                        <select class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-smooth">
+                            <option value>Select range</option>
+                            <option value="1-2">1-2 providers</option>
+                            <option value="3-5">3-5 providers</option>
+                            <option value="6-15">6-15 providers</option>
+                            <option value="15+">15+ providers</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-text-secondary mb-2">Current Challenges</label>
+                    <textarea rows="4" class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-smooth" placeholder="Tell us about your current practice management challenges..."></textarea>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-text-secondary mb-2">Preferred Consultation Time</label>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input type="date" class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-smooth" />
+                        <select class="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-smooth">
+                            <option value>Select time</option>
+                            <option value="9:00">9:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="14:00">2:00 PM</option>
+                            <option value="15:00">3:00 PM</option>
+                            <option value="16:00">4:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn-primary text-lg px-8 py-4">Schedule Consultation</button>
+                    <p class="text-sm text-text-muted mt-4">We'll contact you within 24 hours to confirm your consultation.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 4c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2zm-6 8c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2zm12 0c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2zm-6 8c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2z"/>
+                        </svg>
+                        <span class="text-xl font-bold">Clinicmaster</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">Transforming healthcare practices with intelligent care management solutions that enhance the doctor-patient relationship.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-primary transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-primary transition-smooth">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold mb-4">Platform</h3>
+                    <ul class="space-y-2">
+                        <li><a href="platform_demo.html" class="text-gray-300 hover:text-primary transition-smooth">Demo</a></li>
+                        <li><a href="pricing_roi_calculator.html" class="text-gray-300 hover:text-primary transition-smooth">Pricing</a></li>
+                        <li><a href="security_compliance.html" class="text-gray-300 hover:text-primary transition-smooth">Security</a></li>
+                        <li><a href="implementation_support.html" class="text-gray-300 hover:text-primary transition-smooth">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="customer_stories.html" class="text-gray-300 hover:text-primary transition-smooth">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-smooth">Documentation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-smooth">API</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-smooth">Training</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-300">© 2025 Clinicmaster. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentModule = 0;
+        const modules = ['scheduling', 'emr', 'billing', 'portal', 'analytics'];
+        
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function startDemo() {
+            document.getElementById('demo-interface').classList.remove('hidden');
+            document.getElementById('demo-interface').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showModule(moduleId) {
+            // Hide all modules
+            document.querySelectorAll('.demo-module').forEach(module => {
+                module.classList.add('hidden');
+            });
+            
+            // Show selected module
+            document.getElementById(moduleId + '-module').classList.remove('hidden');
+            
+            // Update navigation
+            document.querySelectorAll('.module-nav-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-primary', 'text-white');
+                btn.classList.add('bg-surface-100', 'text-text-secondary');
+            });
+            
+            const activeBtn = document.querySelector(`[data-module="${moduleId}"]`);
+            activeBtn.classList.add('active', 'bg-primary', 'text-white');
+            activeBtn.classList.remove('bg-surface-100', 'text-text-secondary');
+            
+            // Update progress
+            currentModule = modules.indexOf(moduleId);
+            updateProgress();
+        }
+
+        function showComparison(type) {
+            document.querySelectorAll('.comparison-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            document.getElementById(type + '-scheduling').classList.remove('hidden');
+            
+            document.querySelectorAll('.comparison-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-primary', 'text-white');
+                btn.classList.add('text-text-secondary');
+            });
+            event.target.classList.add('active', 'bg-primary', 'text-white');
+            event.target.classList.remove('text-text-secondary');
+        }
+
+        function showChartSection(section) {
+            document.querySelectorAll('.chart-section').forEach(content => {
+                content.classList.add('hidden');
+            });
+            document.getElementById('chart-' + section).classList.remove('hidden');
+            
+            document.querySelectorAll('.chart-nav-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-primary', 'text-white');
+                btn.classList.add('bg-surface-100', 'text-text-secondary');
+            });
+            event.target.classList.add('active', 'bg-primary', 'text-white');
+            event.target.classList.remove('bg-surface-100', 'text-text-secondary');
+        }
+
+        function nextModule() {
+            if (currentModule < modules.length - 1) {
+                currentModule++;
+                showModule(modules[currentModule]);
+            } else {
+                // Show summary
+                document.getElementById('demo-summary').classList.remove('hidden');
+                document.getElementById('demo-summary').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function previousModule() {
+            if (currentModule > 0) {
+                currentModule--;
+                showModule(modules[currentModule]);
+            }
+        }
+
+        function updateProgress() {
+            const progress = ((currentModule + 1) / modules.length) * 100;
+            document.getElementById('progress-bar').style.width = progress + '%';
+            document.getElementById('current-step').textContent = currentModule + 1;
+            document.getElementById('total-steps').textContent = modules.length;
+        }
+
+        function showConsultationForm() {
+            document.getElementById('consultation-form').classList.remove('hidden');
+            document.getElementById('consultation-form').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function highlightFeature(feature) {
+            // Add visual feedback for interactive features
+            event.currentTarget.classList.add('bg-primary-50', 'border-primary');
+            setTimeout(() => {
+                event.currentTarget.classList.remove('bg-primary-50', 'border-primary');
+            }, 1000);
+        }
+
+        // Initialize demo
+        document.addEventListener('DOMContentLoaded', function() {
+            showModule('scheduling');
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
